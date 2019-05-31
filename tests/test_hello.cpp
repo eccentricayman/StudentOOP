@@ -5,6 +5,6 @@ using namespace std;
 
 int main() {
 	int ret = sayHello();
-    assert(ret == 1);
+    assert(ret == 0);
     return ret;
 }
