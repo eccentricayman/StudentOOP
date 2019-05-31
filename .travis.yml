@@ -15,6 +15,6 @@ notifications:
     on_failure: never
   email:
     recipients:
-      - your_email@nyu.edu
+      - aa6149@nyu.edu
     on_success: always
     on_failure: always  
