@@ -47,14 +47,18 @@ void delete_all_things(Thing** things, int n) {
 }
 
 
-void assignTA(Student& s, Student& ta) {
-	s.ta = &ta;
+void assignTA(Student* s, Student* ta) {
+	s -> ta = ta;
 }
 
-void printTAs(vector<Student> students) {
+void printTAs(vector<Student*>& students) {
 	for (size_t a = 0 ; a < students.size() ; a++) {
-		cout << students[a].name << " -> "
-			 << students[a].ta -> name
-			 << endl;
+		cout << students[a] -> name << " -> ";
+		if (students[a] -> ta != nullptr) {
+			cout << students[a] -> ta -> name << endl;
+		}
+		else {
+			cout << "no ta" << endl;
+		}
 	}
 }
