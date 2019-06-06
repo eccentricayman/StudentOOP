@@ -18,4 +18,4 @@ notifications:
       - aa6149@nyu.edu
 	  - mm8348@nyu.edu
     on_success: always
-    on_failure: always  
+    on_failure: never  
