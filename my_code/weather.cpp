@@ -111,6 +111,28 @@ string Image::display(std::string s) {
     return "Displaying image " + s;
 }
 
+string Png::display(std::string s) {
+    return "Displaying png " + s;
+}
+
+string Gif::display(std::string s) {
+    return "Displaying gif " + s;
+}
+
+string Jpeg::display(std::string s) {
+    return "Displaying jpeg " + s;
+}
+
 double WReading::get_tempF() {
     return (temperature * C_TO_F) + 32;
+}
+
+Image* WReading::get_image() {
+	return img;
+}
+
+void Weather::display_images() {
+	for (WReading wr : wreadings) {
+		cout << wr.get_image() -> display("") << endl;
+	}
 }
