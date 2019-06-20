@@ -23,8 +23,6 @@ int main() {
 
     print_list(cout, head);
 
-    /*
     cout << "List: \n";
     print_list(cout, head);
-    */
 }

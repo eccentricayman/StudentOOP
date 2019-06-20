@@ -65,3 +65,27 @@ Node* last(Node* head) {
 	}
     return current;
 }
+
+bool del_head(Node*& head) {
+	if (head == nullptr) {
+		return false;
+	}
+	else if (head -> next == nullptr) {
+		delete head;
+		head = nullptr;
+	}
+}
+
+//not done
+bool del_tail(Node** prev_next) {
+	return true;
+}
+
+Node* duplicate(Node* head) {
+	return new Node(head -> data, head -> next);
+}
+
+//not done
+Node* reverse(Node* curr, Node* prev=nullptr) {
+	return new Node(0);
+}
