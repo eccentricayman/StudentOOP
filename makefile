@@ -18,7 +18,7 @@ $(TEST_DIR)/test_pointers: $(STUDENT_DIR)/pointers.cpp $(TEST_DIR)/test_pointers
 
 test_weather: $(TEST_DIR)/test_weather
 
-$(TEST_DIR)/test_weather: $(STUDENT_DIR)/date.cpp $(STUDENT_DIR)/weather.cpp $(TEST_DIR)/test_weather.cpp
+$(TEST_DIR)/test_weather: $(STUDENT_DIR)/weather.cpp $(TEST_DIR)/test_weather.cpp
 
 test_complex: $(TEST_DIR)/test_complex
 
@@ -32,12 +32,26 @@ test_llist: $(TEST_DIR)/test_llist
 
 $(TEST_DIR)/test_llist: $(STUDENT_DIR)/llist.cpp $(TEST_DIR)/test_llist.cpp
 
-tests: test_hello test_basics test_pointers test_complex test_vector test_llist
+test_templ_ll: $(TEST_DIR)/test_templ_ll
+
+$(TEST_DIR)/test_templ_ll: $(TEST_DIR)/test_templ_ll.cpp
+
+test_tvector: $(TEST_DIR)/test_tvector
+
+$(TEST_DIR)/test_tvector: $(TEST_DIR)/test_tvector.cpp
+
+test_stl: $(TEST_DIR)/test_stl
+
+$(TEST_DIR)/test_stl: $(TEST_DIR)/test_stl.cpp
+
+
+tests: test_hello test_basics test_pointers test_complex test_vector test_tvector test_llist 
 	tests/test_hello
 	tests/test_basics
 	tests/test_pointers
 	tests/test_complex
 	tests/test_vector
+	tests/test_tvector
 	tests/test_llist
 
 prod: tests
