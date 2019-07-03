@@ -47,7 +47,7 @@ class Fib {
 				return arr[n];
 			}
 
-            int result = 0;
+            long long int result = 0;
             if (n <= 1) {
 				result = 1;
 			}
@@ -62,7 +62,7 @@ class Fib {
         const int MAX_FIB = 100;
         const int NOT_CALCED = -1;
     private:
-	int* arr = new int[MAX_FIB];
+	long long int* arr = new long long int[MAX_FIB];
 };
 
 
